@@ -2,6 +2,7 @@ on: [workflow_dispatch]
 jobs:
   postgres:
     runs-on: ubuntu-latest
+    container: ubuntu:focal
     steps:
       - run: |
           wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
